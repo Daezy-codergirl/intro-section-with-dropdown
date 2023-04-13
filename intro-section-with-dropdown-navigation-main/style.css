@@ -1,0 +1,293 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: Epilogue;
+}
+.header{
+ height: 100vh;
+ width: 100%;
+ background: hsl(0, 0%, 98%);
+}
+.navbar{
+ width: 100%;
+ height: 80px;
+ display: flex;
+ justify-content: space-between;
+align-items: center;
+padding: 20px 20px;
+}
+.logo-holder{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 30px;
+}
+.logo{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.classlist{
+ display: flex;
+ list-style-type: none;
+ color: hsl(0, 0%, 41%);
+}
+ 
+.classlist li{
+ padding: 10px;
+ margin: 0 10px;
+}
+.classlist li a{
+ text-decoration: none;
+ color: hsl(0, 0%, 41%);
+ font-size: 18px;
+}
+ 
+.sub-menu, .list-1{
+ display: none;
+ background: hsl(0, 0%, 98%);
+ border-radius: 10px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ /* box-shadow: ; */
+}
+
+.sub-menu li, .list-1 li{
+ list-style: none;
+ border-radius: 10px;
+ background:hsl(0, 0%, 98%);
+ margin-left: 10px;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ padding: 7px;
+ cursor: pointer;
+ 
+}
+.sub-menu li img, .list-1{
+ margin-right: 10px;
+}
+.classlist li:hover .sub-menu, .classlist li:hover .list-1{
+ display: block;
+ position: absolute;
+ margin-left: -15px;
+ transition: 2s;
+}
+
+.btn1, .btn2{
+ padding: 10px 20px;
+ width: fit-content;
+ margin-right: 10px;
+ color: hsl(0, 0%, 41%);
+ font-size: 18px;
+}
+.btn1 {
+ border-radius: 30px;
+ border :none;
+ background-color: hsl(0, 0%, 98%);
+}
+.btn2{
+ border-radius: 10px;
+ background-color: hsl(0, 0%, 98%);
+ outline: none;
+}
+.navbar .fa{
+ display: none;
+}
+.container {
+ width: 80%;
+ height: calc(100vh - 80px);
+ margin: auto;
+ display: flex;
+ flex-direction: row-reverse;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 120px;
+ overflow: hidden;
+ overflow-x: hidden;
+ overflow-y: hidden;
+}
+.image{
+ background-image: url(./images/image-hero-desktop.png);
+ width: 40%;
+ height: 100%;
+ background-position: center;
+ background-size: contain;
+ background-repeat: no-repeat;
+ animation: slide-down 3s ease;
+ position: relative;
+}
+@keyframes slide-down{
+  0%{
+    top: 300px;
+  }
+  100%{
+    top:0;
+  }
+}
+
+.text-box{
+ width: 35%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ justify-content: space-around;
+ animation: slide-up 3s ease;
+ position: relative;
+}
+@keyframes slide-up{
+  0%{
+    bottom:300px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+
+.text-box .text{
+ font-size: 70px;
+ font-weight: 700;
+}
+.text-box p{
+ color: hsl(0, 0%, 41%);
+ line-height: 30px;
+ font-size: 18px;
+}
+.btn{
+ background: hsl(0, 0%, 8%);
+ color: hsl(0, 0%, 98%);
+ width: fit-content;
+ padding: 15px 20px;
+ border-radius: 10px;
+ cursor:pointer;
+}
+.btn:hover{
+ background:hsl(0, 0%, 98%);
+ color:hsl(0, 0%, 8%);
+ border: 1px solid hsl(0, 0%, 8%);
+ transition: 1s;
+}
+.logo-container{
+ display: flex;
+ justify-content: space-between;
+ margin-top: 70px;
+ padding: 10px;
+}
+
+
+@media (max-width: 375px){
+ .header{
+ height: 100vh;
+ width: 100%;
+}
+ .navbar{
+ width: 100%;
+ height: 50px;
+ display: flex;
+ justify-content: space-between;
+align-items: center;
+padding: 20px 20px;
+}
+.navbar .fa{
+ display: block;
+ margin: 10px;
+ color:  hsl(0, 0%, 8%);
+ font-size: 27px;
+ cursor: pointer;
+}
+ 
+ .navlist {
+ position: fixed;
+ background: hsl(0, 0%, 98%);
+ height: 100vh;
+ width: 200px;
+ top: 0;
+ right: -200px;
+ text-align: left;
+ z-index: 3;
+ transition: 1s;
+}
+.navlist ul{
+ display: block;
+}
+.navlist ul li{
+ margin-top: 20px;
+}
+.classlist li:hover .sub-menu, .classlist li:hover .list-1{
+ display: block;
+ position: relative;
+ margin-left: -15px;
+ transition: 2s;
+}
+.btn1, .btn2{
+ padding: 10px 20px;
+ width: fit-content;
+ margin-right: 10px;
+ color: hsl(0, 0%, 41%);
+ font-size: 18px;
+ display: none;
+ position: relative;
+}
+
+ .container {
+ width: 100%;
+ height: 100vh;
+ margin: auto;
+ display: block;
+ flex-direction: column-reverse;
+ /* justify-content: space-between; */
+ /* align-items: center; */
+}
+
+.image{
+ background-image: url(./images/image-hero-mobile.png);
+ width: 100%;
+ margin-top: -120px;
+}
+.text-box{
+ width: 100%;
+ height: 100%;
+ display: block;
+ flex-direction: column;
+ margin-top: -120px;
+ text-align: center;
+}
+.text-box .text{
+ font-size: 2rem;
+ margin: 20px 0;
+ /* font-weight: 700; */
+}
+.text-box p{
+ color: hsl(0, 0%, 41%);
+ line-height: 30px;
+ font-size: 18px;
+ margin: 20px 0;
+
+}
+.btn{
+ background: hsl(0, 0%, 8%);
+ color: hsl(0, 0%, 98%);
+ width: fit-content;
+ padding: 15px 20px;
+ border-radius: 10px;
+ cursor:pointer;
+ text-align: center;
+ margin: auto;
+}
+.logo-container{
+ display: flex;
+ justify-content: space-around;
+ margin-top: 70px;
+ padding: 10px;
+}
+.logo-container img{
+ width: 80%;
+ 
+}
+
+
+
+
+
+}
